@@ -18,7 +18,8 @@ Import-Module ToNato
 
 ```powershell
 # Add the module to your PowerShell profile
-Add-Content $PROFILE -Value '$env:PSModulePath = $env:PSModulePath + ";$(Get-Location)"'
+Add-Content $PROFILE -Value "`$env:PSModulePath = `$env:PSModulePath + `";$(Get-Location)`""
+
 # Import the module in your PowerShell profile
 Add-Content $PROFILE -Value 'Import-Module ToNato'
 ```
